@@ -20,6 +20,8 @@ function checkclientkc(){
   $kill = new killLP($client);
   return $kill->result();
 }
+
+
 /*
 * () closeclient
 * Devuelve un booleano determinando si el cliente está en el blacklist.

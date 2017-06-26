@@ -1,0 +1,13 @@
+RewriteEngine On
+# Activar en producción si tiene SSL
+RewriteCond %{HTTPS} !=on
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+# Manda a api/index.php por default
+RewriteRule    ^$    api/index.php    [NC,L,QSA]
+
+# Manda a actions.php pasando $1 como accion
+RewriteRule    ^([A-Za-z0-9-]+)/?$    api/actions.php?action=$1   [NC,L,QSA]
+
+#Cambiar en Modo Producción
+ErrorDocument 404 /LPTemplate/main/404.php
