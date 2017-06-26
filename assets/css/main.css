@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/*
+* Mixin para hacer compatibilidad web
+*/
+/*
+* Mixin de animation
+* Ejemplo @include animation(fadeIn 3s infinite)
+*/
+/*
+* Mixin de transformación
+* Ejemplo @include animation(rotate(90deg))
+*/
+/*
+* Mixin de transiciones
+* Ejemplo @include transition(all 2s ease)
+*/
+/*
+* Mixin de filtros
+* Ejemplo @include filter(invert(1))
+*/
+/*
+* Transición lenta
+* Ejemplo @extend .ta
+*/
+.ta {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+/*
+* Transición rápida
+* Ejemplo @extend .ta_q
+*/
+.ta_q {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+
+/*
+* Centra verticalmente un elemento y asigna posición absoluta relativa al parent
+*/
+.cy {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+/*
+* Centra horizontalmente un elemento y asigna posición absoluta relativa al parent
+*/
+.cx {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+/*
+* Centra verticalmente y horizontalmente un elemento y asigna posición absoluta relativa al parent
+*/
+.cxy {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+/*
+* Convierte en flex un elemento
+*/
+.flex {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap; }
+
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-ultra-webfont.ttf);
+  font-weight: 800; }
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-black-webfont.ttf);
+  font-weight: 700; }
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-bold-webfont.ttf);
+  font-weight: 600; }
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-book-webfont.ttf);
+  font-weight: 450; }
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-extralight-webfont.ttf);
+  font-weight: 100; }
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-light-webfont.ttf);
+  font-weight: 300; }
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-medium-webfont.ttf);
+  font-weight: 500; }
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-regular-webfont.ttf);
+  font-weight: 400; }
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-thin-webfont.ttf);
+  font-weight: 200; }
+@font-face {
+  font-family: Geomanist;
+  src: url(../font/geomanist-ultra-webfont.ttf);
+  font-weight: 800; }
+/*
+* $f es la fuente principal
+*/
+/*
+* Asigna la fuente a todos los elementos
+*/
+* {
+  font-family: "Geomanist", "Roboto", sans-serif;
+  font-size: 16px; }
+
+/*
+* Resetea todos los hipervínculos
+*/
+a, a:link, a:hover, a:visited {
+  color: inherit;
+  text-decoration: none; }
+
+/*
+* Quita spinbox en input[type=number]
+*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/*
+* Fija el #wrapper principal
+*/
+#wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/*
+* Helper de #container
+*/
+#container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box; }
+
+/*
+* Helper de secciones
+*/
+section {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative; }
+
+/*
+* Loader
+* Hace fadeout cuando la página carga
+* Ver footer.php
+*/
+#loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; }
+  #loader::after {
+    content: ''; }
+  #loader::before {
+    content: ''; }
+
+/*
+* Body is loaded
+* Clase cuando el documento ha sido cargado, útil para animaciones
+*/
+/*
+* Importa responsive
+*/

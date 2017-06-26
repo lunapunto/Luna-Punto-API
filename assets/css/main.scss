@@ -1,0 +1,90 @@
+@import 'vars';
+@import 'font';
+/*
+* $f es la fuente principal
+*/
+$f: $geomanist;
+
+/*
+* Asigna la fuente a todos los elementos
+*/
+*{
+  font-family: $f;
+  font-size: 16px;
+}
+/*
+* Resetea todos los hipervínculos
+*/
+a,a:link,a:hover,a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+/*
+* Quita spinbox en input[type=number]
+*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/*
+* Fija el #wrapper principal
+*/
+#wrapper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*
+* Helper de #container
+*/
+#container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+/*
+* Helper de secciones
+*/
+section{
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+/*
+* Loader
+* Hace fadeout cuando la página carga
+* Ver footer.php
+*/
+#loader{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  &::after{
+    content: '';
+  }
+  &::before{
+    content: '';
+  }
+}
+
+/*
+* Body is loaded
+* Clase cuando el documento ha sido cargado, útil para animaciones
+*/
+body.loaded{
+
+}
+
+/*
+* Importa responsive
+*/
+@import 'responsive';
