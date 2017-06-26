@@ -29,11 +29,11 @@ define('GLOBAL_SEP', '-');
 define('SLUG','adminSiteTemplate');
 
 // Variables de BD
-define('DATABASE', '');
-define('USERNAME','');
-define('PASSWORD', '');
+define('DATABASE', 'lunapunt_api');
+define('USERNAME','lunapunt_api');
+define('PASSWORD', 'honi1921');
 
-define('HOST', 'localhost');
+define('HOST', '70.32.18.150');
 
 // Timezone
 date_default_timezone_set ('America/Mexico_City');
