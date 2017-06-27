@@ -9,12 +9,12 @@
 */
 
 // ¿El sitio web está en producción?
-$production = true;
+$production = false;
 define('is_production', $production);
 
 
 // Directorios
-define('dir','https://api.lunapunto.com');
+define('dir','http://'.$_SERVER['HTTP_HOST'].'/LP_API');
 define('asset',dir.'/assets');
 define('css',asset.'/css');
 define('js',asset.'/js');
@@ -33,7 +33,7 @@ define('DATABASE', 'lunapunt_api');
 define('USERNAME','lunapunt_api');
 define('PASSWORD', 'honi1921');
 
-define('HOST', 'localhost');
+define('HOST', '70.32.18.150');
 
 // Timezone
 date_default_timezone_set ('America/Mexico_City');
