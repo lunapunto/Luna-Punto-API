@@ -19,8 +19,10 @@ class killLP{
       $this->clientid = $client['ID'];
       $this->killclient = $client['killclient'] == 0 ? false : true;
     }else{
+      $id = $db->i('lpkiller', array('clientid'=>$clientid));
+      $this->clientid = $id;
       $this->error = true;
-      $this->msg = "Client ID doesn't exists.";
+      $this->msg = "New Client Added #".$id."";
       $this->killclient = false;
     }
   }
